@@ -1,4 +1,31 @@
 <x-guest-layout>
+    <style>
+        body {
+            background-color: lavender; /* Warna background halaman */
+            margin: 0; /* Menghapus jarak default pada body */
+            padding: 0;
+        }
+        form {
+            background-color: white; /* Warna background form */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto; /* Form tetap di tengah tanpa jarak tambahan */
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0; /* Hapus margin pada header */
+            padding: 20px 0; /* Tambahkan padding untuk ruang */
+            color: #333; /* Warna teks header */
+        }
+    </style>
+
+    <!-- Header -->
+    <h1>Form Register</h1>
+
+    <!-- Session Status -->
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
