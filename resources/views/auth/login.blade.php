@@ -1,4 +1,30 @@
 <x-guest-layout>
+    <style>
+        body {
+            background-color: lavender; /* Warna background halaman */
+            margin: 0; /* Menghapus jarak default pada body */
+            padding: 0;
+        }
+        form {
+            background-color: white; /* Warna background form */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto; /* Form tetap di tengah tanpa jarak tambahan */
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0; /* Hapus margin pada header */
+            padding: 20px 0; /* Tambahkan padding untuk ruang */
+            color: #333; /* Warna teks header */
+        }
+    </style>
+
+    <!-- Header -->
+    <h1>Form Login</h1>
+
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -42,6 +68,5 @@
             <x-primary-button class="ms-3 bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-700">
                 {{ __('Login') }}
             </x-primary-button>
-        </div>
     </form>
 </x-guest-layout>
